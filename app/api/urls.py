@@ -3,5 +3,7 @@ from django.urls import path, include
 from . import views
 urlpatterns = [
     path("discord_server_configs/<int:pk>",
-         views.DiscordServerConfig.as_view()),
+         views.DiscordServerConfigDetail.as_view()),
+    path("discord_server_configs",
+         views.DiscordServerConfigListCreate.as_view()),
 ]
